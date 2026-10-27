@@ -1,0 +1,29 @@
+[build-system]
+requires = ["hatchling>=1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "rogers"
+version = "1.0"
+authors = [
+	{ name="Younos Hashem", email="younos.hashem@stonybrook.edu"},
+]
+description = "Fast, lightweight GPU neighbor-list code for atomistic simulations."
+readme = "README.md"
+requires-python = ">=3.13.5"
+dependencies = [
+	"jax",
+	"jaxtyping",
+]
+classifiers = [
+	"Development Status :: 3 - Alpha",
+	"Intended Audience :: Science/Research",
+	"Programming Language :: Python :: 3.13",
+	"Topic :: Scientific/Engineering :: Chemistry",
+	"Topic :: Scientific/Engineering :: Physics",
+]
+keywords = ["physics", "chemistry"]
+
+[project.optional-dependencies]
+cuda12 = ["jax[cuda12]>=0.10.2"]
+cuda13 = ["jax[cuda13]>=0.12.0.1"]
