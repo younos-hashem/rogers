@@ -2,8 +2,11 @@
 requires = ["hatchling>=1.26"]
 build-backend = "hatchling.build"
 
+[tool.hatch.build.targets.wheel]
+packages = ["rogers"]
+
 [project]
-name = "rogers"
+name = "rogers-neighbor"
 version = "1.0"
 authors = [
 	{ name="Younos Hashem", email="younos.hashem@stonybrook.edu"},
